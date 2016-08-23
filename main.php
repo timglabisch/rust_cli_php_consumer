@@ -1,6 +1,6 @@
 <?php
 
-$fp = fopen('/tmp/rust_cli_consumer_test', 'w');
+$fp = fopen('/tmp/rust_cli_consumer_test' . $_SERVER["WORKER"], 'w');
 
 while($f = fgets(STDIN)){
     $data = explode(",", $f);
